@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto World</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Shinobi World</a>
+            <ul id="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#villages">Villages</a></li>
+            </ul>
+            <div id="hamburger-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Welcome to the World of Shinobi</h1>
+                <p>Explore the villages, characters, and epic tales from the Naruto universe.</p>
+                <a href="#characters" class="cta-button">Explore Now</a>
+            </div>
+        </section>
+        <section id="characters" class="content-section">
+            <h2>Legendary Shinobi</h2>
+            <div class="card-container">
+                <div class="card hidden" data-character="naruto">
+                    <img src="assests/images/naruto.png" alt="Naruto Uzumaki">
+                    <h3>Naruto Uzumaki</h3>
+                    <p>The number one hyperactive, knucklehead ninja.</p>
+                </div>
+                <div class="card hidden" data-character="sasuke">
+                    <img src="assests/images/sasuke.png" alt="Sasuke Uchiha">
+                    <h3>Sasuke Uchiha</h3>
+                    <p>A prodigy of the Uchiha clan and Naruto's rival.</p>
+                </div>
+                <div class="card hidden" data-character="sakura">
+                    <img src="assests/images/sakura.png" alt="Sakura Haruno">
+                    <h3>Sakura Haruno</h3>
+                    <p>A talented medical-nin and member of Team 7.</p>
+                </div>
+                <div class="card hidden" data-character="kakashi">
+                    <img src="assests/images/Kakashi.png" alt="Kakashi Hatake">
+                    <h3>Kakashi Hatake</h3>
+                    <p>The legendary Copy Ninja of the Hidden Leaf.</p>
+                </div>
+            </div>
+        </section>
+        <section id="villages" class="content-section">
+            <h2>The Great Shinobi Villages</h2>
+            <div class="card-container">
+                <div class="card hidden">
+                    <img src="assests/images/konoha.png" alt="Hidden Leaf Village">
+                    <h3>Konohagakure</h3>
+                    <p>The Hidden Leaf Village, home of Naruto.</p>
+                </div>
+                <div class="card hidden">
+                    <img src="assests/images/sand.png" alt="Hidden Sand Village">
+                    <h3>Sunagakure</h3>
+                    <p>The Hidden Sand Village, led by the Kazekage.</p>
+                </div>
+                <div class="card hidden">
+                    <img src="assests/images/mist.jpg" alt="Hidden Mist Village">
+                    <h3>Kirigakure</h3>
+                    <p>The Hidden Mist Village, known for its swordsmen.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="modal-overlay">
+        <div id="modal">
+            <span id="modal-close-btn">&times;</span>
+            <div id="modal-content">
+                <img id="modal-img" src="" alt="Character Image">
+                <h2 id="modal-title"></h2>
+                <h4>Signature Jutsu:</h4>
+                <p id="modal-jutsu"></p>
+                <h4>Bio:</h4>
+                <p id="modal-bio"></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Naruto World. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
