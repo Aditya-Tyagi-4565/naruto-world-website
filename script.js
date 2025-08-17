@@ -36,22 +36,46 @@ document.addEventListener('DOMContentLoaded', () => {
             bio: "The legendary 'Copy Ninja' and the Sixth Hokage, known for his Sharingan and mastery of over a thousand jutsu."
         }
     };
-    const characterCards = document.querySelectorAll('.card[data-character]');
+    const villageData = {
+        konoha: {
+            title: "Konohagakure (Hidden Leaf)",
+            image: "assests/images/konoha.png",
+            fieldTitle: "Leader (Kage)",
+            fieldText: "Hokage",
+            bio: "One of the Five Great Shinobi Countries, known for producing many of the world's most powerful and legendary ninja, including Naruto Uzumaki."
+        },
+        suna: {
+            title: "Sunagakure (Hidden Sand)",
+            image: "assests/images/sand.png",
+            fieldTitle: "Leader (Kage)",
+            fieldText: "Kazekage",
+            bio: "Located in the Land of Wind, this village is protected by its harsh desert environment and its ninja who specialize in Wind Release and the Puppet Technique."
+        },
+        kiri: {
+            title: "Kirigakure (Hidden Mist)",
+            image: "assests/images/mist.jpg",
+            fieldTitle: "Leader (Kage)",
+            fieldText: "Mizukage",
+            bio: "A village in the Land of Water, originally known for its brutal academy graduation exams and its fearsome Seven Ninja Swordsmen of the Mist."
+        }
+    };
+    const cards = document.querySelectorAll('.card');
     const modalOverlay = document.getElementById('modal-overlay');
     const modalCloseBtn = document.getElementById('modal-close-btn');
     const modalImg = document.getElementById('modal-img');
     const modalTitle = document.getElementById('modal-title');
-    const modalJutsu = document.getElementById('modal-jutsu');
+    const modalFieldTitle = document.querySelector('#modal-content h4')
+    const modalFieldText = document.getElementById('modal-jutsu');
     const modalBio = document.getElementById('modal-bio');
 
-    function openModal(character) {
-        const data = characterData[character];
+    function openModal(data) {
         if(!data) return;
 
         modalImg.src = data.image;
         modalImg.alt = data.title;
         modalTitle.textContent = data.title;
-        modalJutsu.textContent = data.jutsu;
+        modalFieldTitle.textContent = data.fieldTitle;
+        modalFieldText.textContent = data.fieldText;
         modalBio.textContent = data.bio;
 
         modalOverlay.classList.add('active');
@@ -60,10 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
         modalOverlay.classList.remove('active');
     }
 
-    characterCards.forEach(card => {
+    cards.forEach(card => {
         card.addEventListener('click', () => {
             const character = card.dataset.character;
-            openModal(character);
+            const village = card.dataset.village;
+            if(character) {
+                openModal(characterData[character]);
+            } else if (village) {
+                openModal(villageData[village]);
+            }
         });
     });
     modalCloseBtn.addEventListener('click', closeModal);
