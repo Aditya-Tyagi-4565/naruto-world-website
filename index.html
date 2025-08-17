@@ -16,6 +16,10 @@
                 <li><a href="#characters">Characters</a></li>
                 <li><a href="#villages">Villages</a></li>
             </ul>
+            <div class="theme-switcher">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle"></label>
+            </div>
             <div id="hamburger-icon">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -77,6 +81,24 @@
             </div>
         </section>
     </main>
+    <section id="contact" class="content-section">
+        <h2>Join the Academy</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Reason for Joining:</label>
+                <textarea name="message" id="message" rows="2" required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Submit Application</button>
+        </form>
+    </section>
     <div id="modal-overlay">
         <div id="modal">
             <span id="modal-close-btn">&times;</span>
