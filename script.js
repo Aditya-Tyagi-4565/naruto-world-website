@@ -130,4 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme','dark');
         }
     });
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert("Thank you for your application! A scroll will be sent to you shortly.");
+        contactForm.reset();
+    });
 });
