@@ -34,6 +34,27 @@ document.addEventListener('DOMContentLoaded', () => {
             image: "assests/images/Kakashi.png",
             jutsu: "Lightning Blade, Kamui, Chidori",
             bio: "The legendary 'Copy Ninja' and the Sixth Hokage, known for his Sharingan and mastery of over a thousand jutsu."
+        },
+        jiraiya: {
+            title: "Jiraiya",
+            image: "assests/images/jiraiya.png",
+            fieldTitle: "Signature Jutsu",
+            fieldText: "Rasengan, Summoning Jutsu (Toads), Sage Mode",
+            bio: "One of the Legendary Sanin and Naruto's godfather and master. A powerful shinobi and writer known as the 'Toad Sage'."
+        },
+        gaara: {
+            title: "Gaara",
+            image: "assests/images/gaa.png",
+            fieldTitle: "Signature Jutsu",
+            fieldText: "Sand Coffin, Sand Tsunami, Shield of Shukaku",
+            bio: "The Fifth Kazekage of the Hidden Sand. Once a feared Jinchuriki, he overcame his past to become a compassionate and powerful leader."
+        },
+        itachi: {
+            title: "Itachi",
+            image: "assests/images/itachi.png",
+            fieldTitle: "Signature Jutsu",
+            fieldText: "Tsukuyomi, Amaterasu, Susanoo",
+            bio: "A prodigy of the Uchiha clan who sacrificed his life and reputation for the sake of his village and younger brother, Sasuke."
         }
     };
     const villageData = {
