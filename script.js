@@ -157,4 +157,18 @@ document.addEventListener('DOMContentLoaded', () => {
         alert("Thank you for your application! A scroll will be sent to you shortly.");
         contactForm.reset();
     });
+    const searchBar = document.getElementById('search-bar');
+    const characterCardContainer = document.querySelector('#characters .card-container');
+    const allCharacterCards = characterCardContainer.querySelectorAll('.card');
+    searchBar.addEventListener('keyup', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        allCharacterCards.forEach(card => {
+            const characterName = card.querySelector('h3').textContent.toLowerCase();
+            if (characterName.includes(searchTerm)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
 });
